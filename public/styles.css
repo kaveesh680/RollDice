@@ -1,0 +1,16 @@
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.Die-Dice{
+    color: blue;
+    
+}
+
+.App.Dices{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
+}
