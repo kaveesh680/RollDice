@@ -2,15 +2,63 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
 
 }
 
 .Die-Dice{
-    color: blue;
+    color:slateblue;
+    padding: 0.2em;
     
 }
 
-.App.Dices{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
+.Die-button{
+    width: 15em;
+    padding: 1.5em;
+    border: 0;
+    border-radius: 10px;
+    color:white;
+    background-color: black;
+    margin-top: 3em;
+    align-self:center;
 }
+
+.Die-button:hover{
+    background-color: darkslateblue;
+    cursor: pointer;
+}
+
+.Roll-Dice{
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+
+.Roll-Dice-container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.shaking{
+    animation-name: shake;
+    animation-duration: 1s;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
